@@ -52,7 +52,7 @@ UeliでPowershell commandをたたいて実装した．
    }
    ```
 
-   > [!Note]
+   >[!Note]
    >powershellではファイルをメモ帳などから直接開けるので便利です.
    > ```
    > notepad $PROFILE

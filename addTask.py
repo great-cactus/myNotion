@@ -27,14 +27,15 @@ except APIResponseError as error:
         logging.error(error)
 
 # Get input from command-line argument
-addTXT = sys.argv[1]
+addTXT = sys.argv[1:]
+addTXT = ' '.join(addTXT)
 
 # Create a new page and add data to the database
 notion.pages.create(
     **{
         "parent": {"database_id": DATABASE_ID},  # Specify your database ID
         "properties": {
-            "Name": {
+            "名前": {
                 "title": [{"text": {"content": addTXT}}]
             }
         }
